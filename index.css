@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body{
+    color: rgb(31, 29, 29);
+    font-family: 'Special Elite', cursive;
+    font-size: 22px;
+}
+*{
+    box-sizing: border-box;
+}
+.outline{
+    display: block;
+    border: 2px solid rgb(36, 34, 34);
+    box-shadow: 0px 0px 8px  rgba(0, 0, 0, 0.541);
+    border-radius: 15px;
+    width: 500px;
+    height: 640px;
+    margin: auto;
+}
+.result-area{
+    width: 100%;
+    padding: 20px;
+}
+.result{
+    width: 100%;
+    height: 120px;
+    border: 3px solid rgb(56, 52, 52);
+    box-shadow: 0px 0px 8px  rgba(0, 0, 0, 0.541);
+    border-radius: 25px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding: 1.1rem;
+    font-size: 2rem;
+    overflow: hidden;
+}
+.keys-area{
+    width: 100%;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.operators{
+    grid-column: span 4;
+    grid-row: span 1;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4,1fr);
+}
+.operators>*{
+    grid-column: span 1;
+}
+.operator,.number,.side-key{
+    background-color: transparent;
+    border: 4px outset rgb(59, 54, 54);
+    border-radius: 50px;
+    box-shadow: 0px 0px 8px  rgba(0, 0, 0, 0.541);
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Special Elite', cursive;
+    transition: all 200ms linear;
+}
+.clicked-button{
+    transform: scale(0.96);
+    background-color: rgb(232, 233, 233);
+    box-shadow: 0px 0px 6px  rgba(0, 0, 0, 0.842);
+
+}
+.numbers{
+    grid-column: span 3;
+    grid-row: span 3;
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    grid-template-columns: repeat(3,1fr);
+}
+.numbers>*{
+    grid-column: span 1;
+}
+.number[id='0']{
+    grid-column: 2/3;
+}
+.side-keys{
+    grid-column: span 1;
+    grid-row: span 2;
+    display: block;
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr;
+}
+.side-keys>*{
+    grid-row: span 1;
+}
